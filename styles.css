@@ -1,0 +1,38 @@
+body {
+  background-color: gray;
+  font-family: sans-serif;
+}
+
+.page {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  padding: 1em;
+  -moz-box-shadow: 3px 3px 3px black;
+  -webkit-box-shadow: 3px 3px 3px black;
+  box-shadow: 3px 3px 3px black;
+}
+
+h1 {
+  margin: auto;
+  font-weight: bold;
+  font-size: 24pt;
+}
+
+.right_heading {
+  text-align: right;
+  margin-bottom: 0.5em;
+}
+
+.ical-links a {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #999999;
+}
