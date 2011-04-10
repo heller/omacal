@@ -16,13 +16,16 @@
       </div>
       
       <?php
+      
         function calParams($id, $color) {
           return "&amp;src=" . $id . "&amp;color=%23" . $color;
         }
+        
         function googleIcalLink($name, $gcal_url, $color = NULL) {
           $url = 'webcal://www.google.com/calendar/ical/' . $gcal_url . '/public/basic.ics';
           return openIcalLink($name, $url, $color);
         }
+        
         function openIcalLink($name, $url, $color = NULL) {
           $html = '<a href="' . $url . '"';
           if ( !is_null($color) ) {
@@ -31,6 +34,11 @@
           $html .= '>' . $name . '</a>';
           return $html;
         }
+        
+        function linkCategoryHeading($name) {
+          return '<h3>' . $name . '</h3>';
+        }
+        
       
         $tech   = "2952A3"; // blue
         $entr   = "528800"; // green
@@ -47,7 +55,7 @@
 
         //////////
         // Government
-        $icalLinks .= '<h3>Government Calendars</h3>';
+        $icalLinks .= linkCategoryHeading('Government Calendars');
         
         // omacal
         $gcal_url   = 'fsa985i0nrks4osgnm90m1p7oo%40group.calendar.google.com';
@@ -58,7 +66,7 @@
 
         //////////
         // Networking
-        $icalLinks .= '<h3>Networking Calendars</h3>';
+        $icalLinks .= linkCategoryHeading('Networking Calendars');
         
         // omacal
         $gcal_url   = 'clu6re7tdjqglca3bsi9cdt0kg%40group.calendar.google.com';
@@ -69,7 +77,7 @@
                 
         //////////
         // Entrepreneurship
-        $icalLinks .= '<h3>Entrepreneurship Calendars</h3>';
+        $icalLinks .= linkCategoryHeading('Entrepreneurship Calendars');
         
         // omacal
         $gcal_url   = '3blq82185ju6a947aguithce4c%40group.calendar.google.com';
@@ -80,7 +88,7 @@
 
         //////////
         // Shared Interest
-        $icalLinks .= '<h3>Shared Interest Calendars</h3>';
+        $icalLinks .= linkCategoryHeading('Shared Interest Calendars');
         
         // omacal
         $gcal_url   = 'gaq6lm8nheklccmn06b79f8dkc%40group.calendar.google.com';
@@ -95,7 +103,7 @@
 
         //////////
         // Technology
-        $icalLinks .= '<h3>Technology Calendars</h3>';
+        $icalLinks .= linkCategoryHeading('Technology Calendars');
         
         // omacal
         $gcal_url   = 'v22jm0329jldotqilithl7k9ig%40group.calendar.google.com';
