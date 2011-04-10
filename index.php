@@ -128,6 +128,10 @@
         </p>
         <?= $icalLinks; ?>
       </div>
+      
+      <p>
+        Omacal source code is on <a href="https://github.com/heller/omacal">github</a>. Help us improve!
+      </p>
     </div>
   </body>
 </html>
