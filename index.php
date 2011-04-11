@@ -120,6 +120,10 @@
         $icalLinks  .= openIcalLink('Omaha Joomla! Users Group Calendar', 'webcal://www.meetup.com/Omaha-Joomla-Users-Group/events/ical/Omaha+Joomla+Users+Group/', 'tech');
         $url        .= calParams('msha54tjkqh8o7qo4aar720imssk4e7k%40import.calendar.google.com', $tech);
         
+        // Drupal
+        $icalLinks  .= openIcalLink('Drupal Users and Developers of Nebraska Calendar', 'webcal://www.meetup.com/drupal-nebraska/events/ical/Nebraska+Drupalers/', 'tech');
+        $url        .= calParams('kdl1klnov66e4v8j0lj1b8lfg7chmn51%40import.calendar.google.com', $tech);
+        
         
       ?>
       
