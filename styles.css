@@ -28,7 +28,6 @@ h1 {
 a {
   text-decoration: none;
 }
-
 a:hover {
   color: #999999;
 }
@@ -38,7 +37,16 @@ a:hover {
 }
 
 a.tech { color: #2952A3; }
+a.tech:hover { color: #999999; }
+
 a.entr { color: #528800 }
+a.entr:hover { color: #999999; }
+
 a.netw { color: #856508 }
+a.netw:hover { color: #999999; }
+
 a.govt { color: #B1440E }
+a.govt:hover { color: #999999; }
+
 a.social { color: #42104A }
+a.social:hover { color: #999999; }
