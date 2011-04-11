@@ -116,7 +116,7 @@
         
         // 2600
         $gcal_url   = 'tge8dvk7uo66c1jb924dlm96rg%40group.calendar.google.com';
-        $icalLinks  .= openIcalLink('Omaha2600.org Calendar', $gcal_url, 'tech');
+        $icalLinks  .= googleIcalLink('Omaha2600.org Calendar', $gcal_url, 'tech');
         $url        .= calParams($gcal_url, $tech);
         
         // Joomla
