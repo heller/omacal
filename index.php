@@ -21,18 +21,13 @@
           return "&amp;src=" . $id . "&amp;color=%23" . $color;
         }
         
-        function googleIcalLink($name, $gcal_url, $color = NULL) {
+        function googleIcalLink($name, $gcal_url, $class) {
           $url = 'webcal://www.google.com/calendar/ical/' . $gcal_url . '/public/basic.ics';
-          return openIcalLink($name, $url, $color);
+          return openIcalLink($name, $url, $class);
         }
         
-        function openIcalLink($name, $url, $color = NULL) {
-          $html = '<a href="' . $url . '"';
-          if ( !is_null($color) ) {
-            $html .= ' style="color: #' . $color . '"';
-          }
-          $html .= '>' . $name . '</a>';
-          return $html;
+        function openIcalLink($name, $url, $class) {
+          return '<a href="' . $url . '" class="' . $class . '">' . $name . '</a>';
         }
         
         function linkCategoryHeading($name) {
@@ -48,6 +43,7 @@
         
         $icalLinks = '';
         
+        // TODO better name would be $iframe_url
         $url = "https://www.google.com/calendar/embed?"
               . "showTitle=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;ctz=America%2FChicago";
         
@@ -59,7 +55,7 @@
         
         // omacal
         $gcal_url   = 'fsa985i0nrks4osgnm90m1p7oo%40group.calendar.google.com';
-        $icalLinks  .= googleIcalLink('Omacal Government Events', $gcal_url, $govt);
+        $icalLinks  .= googleIcalLink('Omacal Government Events', $gcal_url, 'govt');
         $url        .= calParams($gcal_url, $govt);
 
 
@@ -70,7 +66,7 @@
         
         // omacal
         $gcal_url   = 'clu6re7tdjqglca3bsi9cdt0kg%40group.calendar.google.com';
-        $icalLinks  .= googleIcalLink('Omacal Networking Events', $gcal_url, $netw);
+        $icalLinks  .= googleIcalLink('Omacal Networking Events', $gcal_url, 'netw');
         $url        .= calParams($gcal_url, $netw);
         
 
@@ -81,7 +77,7 @@
         
         // omacal
         $gcal_url   = '3blq82185ju6a947aguithce4c%40group.calendar.google.com';
-        $icalLinks  .= googleIcalLink('Omacal Entrepreneurship Events', $gcal_url, $entr);
+        $icalLinks  .= googleIcalLink('Omacal Entrepreneurship Events', $gcal_url, 'entr');
         $url        .= calParams($gcal_url, $entr);
 
 
@@ -92,11 +88,11 @@
         
         // omacal
         $gcal_url   = 'gaq6lm8nheklccmn06b79f8dkc%40group.calendar.google.com';
-        $icalLinks  .= googleIcalLink('Omacal Shared Interest Events', $gcal_url, $social);
+        $icalLinks  .= googleIcalLink('Omacal Shared Interest Events', $gcal_url, 'social');
         $url        .= calParams($gcal_url, $social);
         
         // omahatrails.com calendar
-        $icalLinks  .= openIcalLink('Omahatrails.com Calendar', 'webcal://omahatrails.com/index.php?view=calendar&catid=&vcal=1&option=com_simplecalendar', $social);
+        $icalLinks  .= openIcalLink('Omahatrails.com Calendar', 'webcal://omahatrails.com/index.php?view=calendar&catid=&vcal=1&option=com_simplecalendar', 'social');
         $url        .= calParams('2a5kghbrujv6u8jd29e252s0k2qbqs3o%40import.calendar.google.com', $social);
 
 
@@ -107,21 +103,21 @@
         
         // omacal
         $gcal_url   = 'v22jm0329jldotqilithl7k9ig%40group.calendar.google.com';
-        $icalLinks  .= googleIcalLink('Omacal Technology Events', $gcal_url, $tech);
+        $icalLinks  .= googleIcalLink('Omacal Technology Events', $gcal_url, 'tech');
         $url        .= calParams($gcal_url, $tech);
         
         // OLUG
         $gcal_url   = '6obgndddg57ho25ks68uf3ndpo%40group.calendar.google.com';
-        $icalLinks  .= googleIcalLink("Omaha Linux Users' Group (OLUG.org) Calendar", $gcal_url, $tech);
+        $icalLinks  .= googleIcalLink("Omaha Linux Users' Group (OLUG.org) Calendar", $gcal_url, 'tech');
         $url        .= calParams($gcal_url, $tech);
         
         // 2600
         $gcal_url   = 'tge8dvk7uo66c1jb924dlm96rg%40group.calendar.google.com';
-        $icalLinks  .= openIcalLink('Omaha2600.org Calendar', $gcal_url, $tech);
+        $icalLinks  .= openIcalLink('Omaha2600.org Calendar', $gcal_url, 'tech');
         $url        .= calParams($gcal_url, $tech);
         
         // Joomla
-        $icalLinks  .= openIcalLink('Omaha Joomla! Users Group Calendar', 'webcal://www.meetup.com/Omaha-Joomla-Users-Group/events/ical/Omaha+Joomla+Users+Group/', $tech);
+        $icalLinks  .= openIcalLink('Omaha Joomla! Users Group Calendar', 'webcal://www.meetup.com/Omaha-Joomla-Users-Group/events/ical/Omaha+Joomla+Users+Group/', 'tech');
         $url        .= calParams('msha54tjkqh8o7qo4aar720imssk4e7k%40import.calendar.google.com', $tech);
         
         

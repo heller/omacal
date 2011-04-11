@@ -25,10 +25,6 @@ h1 {
   margin-bottom: 0.5em;
 }
 
-.ical-links a {
-  display: block;
-}
-
 a {
   text-decoration: none;
 }
@@ -36,3 +32,13 @@ a {
 a:hover {
   color: #999999;
 }
+
+.ical-links a {
+  display: block;
+}
+
+a.tech { color: #2952A3; }
+a.entr { color: #528800 }
+a.netw { color: #856508 }
+a.govt { color: #B1440E }
+a.social { color: #42104A }
