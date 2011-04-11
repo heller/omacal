@@ -95,6 +95,9 @@
         $icalLinks  .= openIcalLink('Omahatrails.com Calendar', 'webcal://omahatrails.com/index.php?view=calendar&catid=&vcal=1&option=com_simplecalendar', 'social');
         $url        .= calParams('2a5kghbrujv6u8jd29e252s0k2qbqs3o%40import.calendar.google.com', $social);
 
+        // Omaha Photography Meetup Group
+        $icalLinks  .= openIcalLink('Omaha Photography Meetup Group', 'webcal://www.meetup.com/Omaha-Photography-Meetup-Group/events/ical/Omaha+Photography+Meetup+Group/', 'social');
+        $url        .= calParams('i2q91sjdtah4589ju532dph1j3ao3rgr%40import.calendar.google.com', $social);
 
 
         //////////
