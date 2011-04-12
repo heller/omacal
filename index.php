@@ -126,6 +126,9 @@
         $icalLinks  .= openIcalLink('Drupal Users and Developers of Nebraska Calendar', 'webcal://www.meetup.com/drupal-nebraska/events/ical/Nebraska+Drupalers/', 'tech');
         $iframe_url .= calParams('kdl1klnov66e4v8j0lj1b8lfg7chmn51%40import.calendar.google.com', $tech);
         
+        // Hacks and Hackers
+        $icalLinks  .= openIcalLink('Hacks and Hackers of the Heartland', 'webcal://www.meetup.com/hackshackersheartland/events/ical/Hacks-Hackers+Heartland+%28Omaha%2C+NB%29/', 'tech');
+        $iframe_url .= calParams('4jaarc32iviue3rhdg8h23bkai6kfuc4%40import.calendar.google.com', $tech);
         
       ?>
       
