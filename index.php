@@ -36,10 +36,9 @@
         
       
         $tech   = "2952A3"; // blue
-        $entr   = "528800"; // green
-        $netw   = "856508"; // yellow
-        $govt   = "B1440E"; // red
-        $social = "42104A"; // purple
+        $gov    = "528800"; // green
+        $biz    = "856508"; // yellow
+        $shared = "42104A"; // purple
         
         $icalLinks = '';
         
@@ -49,63 +48,54 @@
         
 
         //////////
-        // Government
-        $icalLinks .= linkCategoryHeading('Government Calendars');
+        // Government / Public
         
         // omacal
         $gcal_url   = 'fsa985i0nrks4osgnm90m1p7oo%40group.calendar.google.com';
-        $icalLinks  .= googleIcalLink('Omacal Government Events', $gcal_url, 'govt');
-        $iframe_url .= calParams($gcal_url, $govt);
-
+        $icalLinks  .= googleIcalLink('Government Events (maintained by omacal)', $gcal_url, 'gov');
+        $iframe_url .= calParams($gcal_url, $gov);
+        
+        // US Holidays
+        $gcal_url   = 'en.usa%23holiday%40group.v.calendar.google.com';
+        $icalLinks  .= googleIcalLink('US Holidays (according to Google)', $gcal_url, 'gov');
+        $iframe_url .= calParams($gcal_url, $gov);
 
 
         //////////
-        // Networking
-        $icalLinks .= linkCategoryHeading('Networking Calendars');
+        // Business
+        $icalLinks .= linkCategoryHeading('');
         
-        // omacal
+        // omacal Networking
         $gcal_url   = 'clu6re7tdjqglca3bsi9cdt0kg%40group.calendar.google.com';
-        $icalLinks  .= googleIcalLink('Omacal Networking Events', $gcal_url, 'netw');
-        $iframe_url .= calParams($gcal_url, $netw);
+        $icalLinks  .= googleIcalLink('Business Networking Events (maintained by omacal)', $gcal_url, 'biz');
+        $iframe_url .= calParams($gcal_url, $biz);
         
-
-                
-        //////////
-        // Entrepreneurship
-        $icalLinks .= linkCategoryHeading('Entrepreneurship Calendars');
-        
-        // omacal
-        $gcal_url   = '3blq82185ju6a947aguithce4c%40group.calendar.google.com';
-        $icalLinks  .= googleIcalLink('Omacal Entrepreneurship Events', $gcal_url, 'entr');
-        $iframe_url .= calParams($gcal_url, $entr);
-
-
 
         //////////
         // Shared Interest
-        $icalLinks .= linkCategoryHeading('Shared Interest Calendars');
+        $icalLinks .= linkCategoryHeading('');
         
         // omacal
         $gcal_url   = 'gaq6lm8nheklccmn06b79f8dkc%40group.calendar.google.com';
-        $icalLinks  .= googleIcalLink('Omacal Shared Interest Events', $gcal_url, 'social');
-        $iframe_url .= calParams($gcal_url, $social);
+        $icalLinks  .= googleIcalLink('Shared Interest Events (maintained by omacal)', $gcal_url, 'shared');
+        $iframe_url .= calParams($gcal_url, $shared);
         
         // omahatrails.com calendar
-        $icalLinks  .= openIcalLink('Omahatrails.com Calendar', 'webcal://omahatrails.com/index.php?view=calendar&catid=&vcal=1&option=com_simplecalendar', 'social');
-        $iframe_url .= calParams('2a5kghbrujv6u8jd29e252s0k2qbqs3o%40import.calendar.google.com', $social);
+        $icalLinks  .= openIcalLink('Omahatrails.com Calendar', 'webcal://omahatrails.com/index.php?view=calendar&catid=&vcal=1&option=com_simplecalendar', 'shared');
+        $iframe_url .= calParams('2a5kghbrujv6u8jd29e252s0k2qbqs3o%40import.calendar.google.com', $shared);
 
         // Omaha Photography Meetup Group
-        $icalLinks  .= openIcalLink('Omaha Photography Meetup Group', 'webcal://www.meetup.com/Omaha-Photography-Meetup-Group/events/ical/Omaha+Photography+Meetup+Group/', 'social');
-        $iframe_url .= calParams('i2q91sjdtah4589ju532dph1j3ao3rgr%40import.calendar.google.com', $social);
+        $icalLinks  .= openIcalLink('Omaha Photography Meetup Group', 'webcal://www.meetup.com/Omaha-Photography-Meetup-Group/events/ical/Omaha+Photography+Meetup+Group/', 'shared');
+        $iframe_url .= calParams('i2q91sjdtah4589ju532dph1j3ao3rgr%40import.calendar.google.com', $shared);
 
 
         //////////
         // Technology
-        $icalLinks .= linkCategoryHeading('Technology Calendars');
+        $icalLinks .= linkCategoryHeading('');
         
         // omacal
         $gcal_url   = 'v22jm0329jldotqilithl7k9ig%40group.calendar.google.com';
-        $icalLinks  .= googleIcalLink('Omacal Technology Events', $gcal_url, 'tech');
+        $icalLinks  .= googleIcalLink('Technology Events (maintained by omacal)', $gcal_url, 'tech');
         $iframe_url .= calParams($gcal_url, $tech);
         
         // OLUG
@@ -120,7 +110,7 @@
         
         // Joomla
         $icalLinks  .= openIcalLink('Omaha Joomla! Users Group Calendar', 'webcal://www.meetup.com/Omaha-Joomla-Users-Group/events/ical/Omaha+Joomla+Users+Group/', 'tech');
-        $iframe_url .= calParams('msha54tjkqh8o7qo4aar720imssk4e7k%40import.calendar.google.com', $tech);
+        $iframe_url .= calParams('0oa420nbh7qhf2dcp59ihq7kkd1ev0j3%40import.calendar.google.com', $tech);
         
         // Drupal
         $icalLinks  .= openIcalLink('Drupal Users and Developers of Nebraska Calendar', 'webcal://www.meetup.com/drupal-nebraska/events/ical/Nebraska+Drupalers/', 'tech');
@@ -129,6 +119,12 @@
         // Hacks and Hackers
         $icalLinks  .= openIcalLink('Hacks and Hackers of the Heartland', 'webcal://www.meetup.com/hackshackersheartland/events/ical/Hacks-Hackers+Heartland+%28Omaha%2C+NB%29/', 'tech');
         $iframe_url .= calParams('4jaarc32iviue3rhdg8h23bkai6kfuc4%40import.calendar.google.com', $tech);
+        
+        // OJUG
+        $gcal_url   = 'qbgmdhgjdi5fidbbna5409ecm4%40group.calendar.google.com';
+        $icalLinks  .= googleIcalLink('Omaha Java Users Group', $gcal_url, 'tech');
+        $iframe_url .= calParams($gcal_url, $tech);
+        
         
       ?>
       

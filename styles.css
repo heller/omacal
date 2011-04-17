@@ -39,14 +39,11 @@ a:hover {
 a.tech { color: #2952A3; }
 a.tech:hover { color: #999999; }
 
-a.entr { color: #528800 }
-a.entr:hover { color: #999999; }
+a.gov { color: #528800 }
+a.gov:hover { color: #999999; }
 
-a.netw { color: #856508 }
-a.netw:hover { color: #999999; }
+a.biz { color: #856508 }
+a.biz:hover { color: #999999; }
 
-a.govt { color: #B1440E }
-a.govt:hover { color: #999999; }
-
-a.social { color: #42104A }
-a.social:hover { color: #999999; }
+a.shared { color: #42104A }
+a.shared:hover { color: #999999; }
