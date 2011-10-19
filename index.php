@@ -52,7 +52,7 @@
         
         // omacal
         $gcal_url   = 'fsa985i0nrks4osgnm90m1p7oo%40group.calendar.google.com';
-        $icalLinks  .= googleIcalLink('Government Events (maintained by omacal)', $gcal_url, 'gov');
+        $icalLinks  .= googleIcalLink('Local Government Events (maintained by omacal)', $gcal_url, 'gov');
         $iframe_url .= calParams($gcal_url, $gov);
         
         // US Holidays
@@ -67,9 +67,12 @@
         
         // omacal Networking
         $gcal_url   = 'clu6re7tdjqglca3bsi9cdt0kg%40group.calendar.google.com';
-        $icalLinks  .= googleIcalLink('Business Networking Events (maintained by omacal)', $gcal_url, 'biz');
+        $icalLinks  .= googleIcalLink('Local Networking Events (maintained by omacal)', $gcal_url, 'biz');
         $iframe_url .= calParams($gcal_url, $biz);
         
+        // Omaha Co-Founders Meetup
+        $icalLinks  .= openIcalLink('Omaha Co-Founders Meetup Group', 'webcal://www.meetup.com/Omaha-Co-Founders-Meetup/events/ical/Omaha+Co-Founders+Meetup/', 'biz');
+        $iframe_url .= calParams('5fratl1fqaffl3sk7546en1c7ipsbjl0%40import.calendar.google.com',$biz);
 
         //////////
         // Shared Interest
@@ -125,7 +128,10 @@
         $icalLinks  .= googleIcalLink('Omaha Java Users Group', $gcal_url, 'tech');
         $iframe_url .= calParams($gcal_url, $tech);
         
-        
+        // Omaha Cloud Computing Meetup
+        $icalLinks  .= openIcalLink('Omaha Cloud Computing Group', 'webcal://www.meetup.com/OmaCloud/events/ical/Omaha+Cloud+Computing+Group/', 'tech');
+        $iframe_url .= calParams('u3dm58dp42n2njp8jk86r73naump859o@import.calendar.google.com', $tech);
+
       ?>
       
       <iframe src="<?= $iframe_url ?>" style=" border-width:0 " width="800" height="600" frameborder="0" scrolling="no"></iframe>
