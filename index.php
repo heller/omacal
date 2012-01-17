@@ -136,6 +136,14 @@
         $icalLinks  .= openIcalLink('Omaha Mobile Group Meetup', 'webcal://www.meetup.com/Omaha-Mobile-Group/events/ical/Omaha+Mobile+Group/', 'tech');
         $iframe_url .= calParams('8bqlmmviidme2ftggilecec4nujr981q@import.calendar.google.com', $tech);
         
+	// Omaha Front-end Web & jQuery
+        $icalLinks  .= openIcalLink('Omaha Front-end Web & jQuery Meetup', 'webcal://www.meetup.com/jquery-omaha/events/ical/Omaha+Front-end+Web+%26+jQuery/', 'tech');
+        $iframe_url .= calParams('oo37p31jclvk19mhkkf977mulkk60jbp@import.calendar.google.com', $tech);
+
+	// Omaha Agile Development Meetup
+        $icalLinks  .= openIcalLink('Omaha Agile Development Meetup', 'webcal://www.meetup.com/Omaha-Agile-Development/events/ical/Omaha+Agile+Development/', 'tech');
+        $iframe_url .= calParams('2t4e67af832m8b29tr9st7a0fsilajjs@import.calendar.google.com', $tech);
+
         
       ?>
       
