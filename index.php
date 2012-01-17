@@ -131,7 +131,12 @@
         // Omaha Cloud Computing Meetup
         $icalLinks  .= openIcalLink('Omaha Cloud Computing Group', 'webcal://www.meetup.com/OmaCloud/events/ical/Omaha+Cloud+Computing+Group/', 'tech');
         $iframe_url .= calParams('u3dm58dp42n2njp8jk86r73naump859o@import.calendar.google.com', $tech);
-
+        
+        // Omaha Mobile Group Meetup
+        $icalLinks  .= openIcalLink('Omaha Mobile Group Meetup', 'webcal://www.meetup.com/Omaha-Mobile-Group/events/ical/Omaha+Mobile+Group/', 'tech');
+        $iframe_url .= calParams('8bqlmmviidme2ftggilecec4nujr981q@import.calendar.google.com', $tech);
+        
+        
       ?>
       
       <iframe src="<?= $iframe_url ?>" style=" border-width:0 " width="800" height="600" frameborder="0" scrolling="no"></iframe>
